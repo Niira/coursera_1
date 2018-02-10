@@ -1,0 +1,6 @@
+inFile = open('input.txt', 'r', encoding='utf8')
+outFile = open('output.txt', 'w', encoding='utf8')
+setA = set(map(int, inFile.readline().split()))
+setB = set(map(int, inFile.readline().split()))
+print(*sorted(setA & setB), file=outFile)
+outFile.close()

@@ -1,0 +1,6 @@
+N = int(input())
+a = str(N // 1000)
+b = str((N // 100) % 10)
+c = str((N // 10) % 10)
+d = str(N % 10)
+print(int(a + b) - int(d + c) + 1)
