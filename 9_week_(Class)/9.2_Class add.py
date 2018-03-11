@@ -43,17 +43,7 @@ class Matrix:
                     numbers = []
         return Matrix(result)
 
-    def __rmul__(self, other):
-        result = []
-        numbers = []
-        for i in range(len(self.L)):
-            for j in range(len(self.L[i])):
-                s1 = self.L[i][j] * other
-                numbers.append(s1)
-                if len(numbers) == len(self.L):
-                    result.append(numbers)
-                    numbers = []
-        return Matrix(result)
+    __rmul__ = __mul__
 
 
 exec(stdin.read())
